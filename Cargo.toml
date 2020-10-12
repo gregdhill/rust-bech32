@@ -1,6 +1,6 @@
 [package]
-name = "bech32"
-version = "0.7.2"
+name = "bech32-no_std"
+version = "0.7.3"
 authors = ["Clark Moody"]
 repository = "https://github.com/rust-bitcoin/rust-bech32"
 description = "Encodes and decodes the Bech32 format"
@@ -8,8 +8,11 @@ readme = "README.md"
 keywords = ["base32", "encoding", "bech32"]
 categories = ["encoding"]
 license = "MIT"
+edition = "2018"
 
 [features]
+default = ["std"]
+std = []
 # Only for CI to make all warnings errors, do not activate otherwise (may break forward compatibility)
 strict = []
 
